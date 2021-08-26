@@ -1,0 +1,13 @@
+.cartItems img {
+  width: 170px;
+  height: 220px;
+}
+
+.cartItems {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+  box-sizing: border-box;
+}

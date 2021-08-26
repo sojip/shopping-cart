@@ -1,0 +1,10 @@
+.cart {
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.cartContent {
+  width: 80%;
+  margin: auto;
+  box-sizing: border-box;
+}

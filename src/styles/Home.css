@@ -13,22 +13,23 @@
   width: 80%;
   margin: auto;
   height: 100%;
-  padding-top: 50px;
+  /* padding-top: 50px; */
   padding-bottom: 20px;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: right;
+  background-position: left;
 }
 
 .homeText {
   width: 40%;
-  padding: 10px 0px 10px 5px;
+  padding: 10px 0px 10px 15px;
   background-color: rgba(227, 226, 226, 0.6);
   border-radius: 15px;
+  float: right;
+  /* border: solid 1px #2e596a; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 768px) {
@@ -37,24 +38,24 @@
   }
 
   .homeContent {
-    padding-top: 30px;
     background-size: cover;
     background-position: center;
   }
 }
 
 .homeText span {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .homeText p {
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin: 0;
 }
 
 .homeText button {
-  background-color: rgb(0, 0, 0, 0.6);
+  background-color: rgb(0, 0, 0, 0.3);
   color: white;
+  font-weight: bold;
   border: none;
   border-radius: 15px;
   padding: 10px;

@@ -8,7 +8,7 @@ const Item = (props) => {
       <p>{props.data.title}</p>
       <span>{props.data.price}$</span>
       <br></br>
-      <button>Add To Cart</button>
+      <button onClick={props.addToCart}>Add To Cart</button>
     </div>
   );
 };

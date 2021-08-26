@@ -1,7 +1,7 @@
 import "../styles/Nav.css";
 import { Link } from "react-router-dom";
 
-function Nav() {
+function Nav(props) {
   const navLinkStyle = {
     color: "black",
     textDecoration: "none",
@@ -14,9 +14,6 @@ function Nav() {
         </Link>
 
         <ul>
-          {/* <Link style={navLinkStyle} to="/">
-            <li>Home</li>
-          </Link> */}
           <Link style={navLinkStyle} to="/shop">
             <li>Shop</li>
           </Link>
@@ -27,7 +24,9 @@ function Nav() {
                 src="https://img.icons8.com/glyph-neue/64/000000/shopping-cart.png"
                 alt="cart"
               />
-              <span id="itemsNum">4</span>
+              {props.itemsNum > 0 && (
+                <span id="itemsNum">{props.itemsNum}</span>
+              )}
             </li>
           </Link>
         </ul>
