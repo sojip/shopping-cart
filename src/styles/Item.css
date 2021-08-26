@@ -1,0 +1,33 @@
+.items {
+  width: 300px;
+  height: 450px;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.items img {
+  width: 170px;
+  height: 220px;
+}
+
+.imgContainer {
+  text-align: center;
+}
+
+.items p {
+  height: 75px;
+}
+
+.items button {
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px 0px 0px 0px;
+}
