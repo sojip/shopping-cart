@@ -11,3 +11,12 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+.cartItems .details button {
+  margin: 20px 0px 20px 0px;
+  cursor: pointer;
+}
+
+#quantity {
+  margin: 0px 10px 0px 10px;
+}

@@ -16,7 +16,7 @@ const Home = () => {
           <br></br>
           <p>Choose what you want now !!!</p>
           <Link to="/shop">
-            <button>Start Shopping </button>
+            <button>Start shopping</button>
           </Link>
         </div>
       </div>

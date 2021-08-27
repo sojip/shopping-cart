@@ -40,10 +40,14 @@ function App() {
 
   function decreaseQuantity(e) {
     setItemsNum(itemsNum - 1);
-    let id = Number(e.target.parentNode.getAttribute("id"));
+    let id = Number(e.target.parentNode.dataset.id);
     let item = cart.find((item) => {
       return item.id === id;
     });
+    if (item.quantity === 1) {
+      setCart(cart.filter((element) => element.id !== id));
+      return;
+    }
     setCart(
       cart.map((element) => {
         if (element.id === item.id) element.quantity--;
@@ -54,7 +58,7 @@ function App() {
 
   function increaseQuantity(e) {
     setItemsNum(itemsNum + 1);
-    let id = Number(e.target.parentNode.getAttribute("id"));
+    let id = Number(e.target.parentNode.dataset.id);
     let item = cart.find((item) => {
       return item.id === id;
     });
