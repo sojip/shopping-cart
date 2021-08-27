@@ -4,7 +4,7 @@ import Cart from "./components/Cart";
 import Nav from "./components/Nav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
