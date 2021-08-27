@@ -38,10 +38,9 @@ function Shop(props) {
         style={{
           textAlign: "center",
           position: "absolute",
-          backgroundImage: "linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0,0.6))",
           top: "0",
           width: "100%",
-          height: "100%",
+          height: "100vh",
           display: "flex",
           alignItems: "center",
         }}
