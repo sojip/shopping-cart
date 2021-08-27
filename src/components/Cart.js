@@ -4,6 +4,7 @@ import "../styles/Cart.css";
 function Cart(props) {
   const [items, setItems] = useState([]);
   const [total, setTotal] = useState(0);
+
   useEffect(() => {
     let cart = props.cart;
     setItems([...cart]);
