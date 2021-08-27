@@ -1,7 +1,6 @@
 .itemsContainer {
   width: 80%;
   margin: auto;
-  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
