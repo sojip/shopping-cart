@@ -1,8 +1,17 @@
 import "../styles/Home.css";
 import { Link } from "react-router-dom";
 import shoppingcart from "../shoppingcart.png";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    //fix the height of App
+    let app = document.querySelector(".App");
+    app.classList.add("fixedHeight");
+    return () => {
+      app.classList.remove("fixedHeight");
+    };
+  }, []);
   return (
     <div className="home">
       <div

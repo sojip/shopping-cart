@@ -1,7 +1,9 @@
 header {
   padding: 20px;
 }
-
+.sticky {
+  background-color: yellow;
+}
 .container {
   width: 80%;
   margin: auto;
@@ -11,7 +13,6 @@ header h1 {
   width: min-content;
   padding: 10px;
 }
-
 nav {
   width: 30%;
   box-sizing: border-box;
