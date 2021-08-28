@@ -1,18 +1,23 @@
-nav {
-  height: 100px;
-  width: 100%;
-  box-sizing: border-box;
+header {
+  padding: 20px;
 }
 
-.navContent {
-  display: flex;
+.container {
   width: 80%;
-  height: 100%;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: space-between;
+  margin: auto;
+}
+header h1 {
+  margin: 0;
+  width: min-content;
+  padding: 10px;
+}
+
+nav {
+  width: 30%;
   box-sizing: border-box;
-  padding: 5px;
+  float: right;
+  position: relative;
+  bottom: 70px;
 }
 
 nav ul {
@@ -21,24 +26,31 @@ nav ul {
   margin: 0;
   justify-content: space-between;
   align-items: center;
-  width: 20%;
-  flex: 0 0 auto;
+  width: 100%;
   box-sizing: border-box;
 }
 
 @media screen and (max-width: 768px) {
-  nav {
-    height: 140px;
-    position: relative;
-  }
-  .navContent {
+  header .container {
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
   }
-  nav ul {
+  nav {
+    position: static;
     width: 100%;
+    background-color: white;
+    padding: 20px;
+  }
+
+  nav ul {
     justify-content: space-around;
+  }
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    width: 100%;
   }
 }
 

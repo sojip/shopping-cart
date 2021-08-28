@@ -1,18 +1,29 @@
 import "../styles/Nav.css";
 import { Link } from "react-router-dom";
 
-function Nav(props) {
-  const navLinkStyle = {
-    color: "black",
-    textDecoration: "none",
-  };
+const navLinkStyle = {
+  color: "black",
+  textDecoration: "none",
+  margin: "0",
+  padding: "0",
+};
+
+function Header(props) {
   return (
-    <nav>
-      <div className="navContent">
+    <header>
+      <div className="container">
         <Link style={navLinkStyle} to="/">
           <h1>FakeStore</h1>
         </Link>
+      </div>
+    </header>
+  );
+}
 
+function Nav(props) {
+  return (
+    <div className="container sticky">
+      <nav>
         <ul>
           <Link style={navLinkStyle} to="/shop">
             <li>Shop</li>
@@ -30,9 +41,9 @@ function Nav(props) {
             </li>
           </Link>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }
 
-export default Nav;
+export { Nav, Header };

@@ -1,7 +1,7 @@
 import "./App.css";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
-import Nav from "./components/Nav";
+import { Nav, Header } from "./components/Nav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import { useState } from "react";
@@ -73,6 +73,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Header />
         <Nav itemsNum={itemsNum} />
         <Switch>
           <Route exact path="/" component={Home} />
