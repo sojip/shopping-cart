@@ -1,7 +1,6 @@
 .home {
   height: calc(100% - 120px);
   width: 100%;
-  background-color: chartreuse;
 }
 
 .homeContent {
