@@ -4,19 +4,26 @@ import Cart from "./components/Cart";
 import { Nav, Header } from "./components/Nav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [cart, setCart] = useState([]);
   const [itemsNum, setItemsNum] = useState(0);
   const [datas, setDatas] = useState([]);
 
+  useEffect(() => {
+    setItemsNum(
+      cart.reduce((accumulator, item) => {
+        return accumulator + item.quantity;
+      }, 0)
+    );
+  }, [cart]);
+
   function transferDatas(datas) {
     setDatas([...datas]);
   }
 
   function addToCart(e) {
-    setItemsNum(itemsNum + 1);
     let itemId = Number(e.target.parentNode.getAttribute("id"));
     //check if item has already been selected
     let item = cart.find((item) => {
@@ -39,7 +46,6 @@ function App() {
   }
 
   function decreaseQuantity(e) {
-    setItemsNum(itemsNum - 1);
     let id = Number(e.target.parentNode.dataset.id);
     let item = cart.find((item) => {
       return item.id === id;
@@ -57,7 +63,6 @@ function App() {
   }
 
   function increaseQuantity(e) {
-    setItemsNum(itemsNum + 1);
     let id = Number(e.target.parentNode.dataset.id);
     let item = cart.find((item) => {
       return item.id === id;
