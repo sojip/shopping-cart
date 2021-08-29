@@ -76,7 +76,6 @@ function App() {
         <Header />
         <Nav itemsNum={itemsNum} />
         <Switch>
-          <Route exact path="/" component={Home} />
           <Route
             exact
             path="/shop"
@@ -100,6 +99,7 @@ function App() {
               />
             )}
           />
+          <Route path="/" component={Home} />
         </Switch>
       </div>
     </Router>
